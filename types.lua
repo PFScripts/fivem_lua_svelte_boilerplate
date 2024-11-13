@@ -1,0 +1,3 @@
+---@class NUI_DATA
+---@field message table
+---@field focus boolean?
