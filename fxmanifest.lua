@@ -13,22 +13,8 @@ ox_lib 'locale'
 
 shared_script '@ox_lib/init.lua'
 
-client_scripts {
-  'client/*.lua',
-  'client/modules/*.lua'
-}
+client_scripts {'client/*.lua', 'client/modules/*.lua'}
 
-server_scripts {
-  'server/*.lua'
-}
+files {'web/build/index.html', 'web/build/**/*', 'locales/*.json'}
 
-files {
-  'web/build/index.html',
-  'web/build/**/*',
-  'locales/*.json'
-}
-
-dependencies {
-  '/onesync',
-  'ox_lib'
-}
+dependencies {'ox_lib'}

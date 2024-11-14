@@ -9,12 +9,11 @@ end
 
 ---@param body any
 ---@param resultCallback function
-local function hideComponent(body, resultCallback)
-  local data = {message = body, focus = false}
-  handleNui(data)
+local function hideUI(body, resultCallback)
+  handleNui({message = body, focus = false})
   resultCallback(true)
 end
 
-RegisterNUICallback('hideComponent', hideComponent)
+RegisterNUICallback('hideUI', hideUI)
 
 return handleNui
