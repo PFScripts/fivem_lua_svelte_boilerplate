@@ -1,11 +1,7 @@
 <script lang='ts'>
-  import {getContext} from 'svelte';
-  import type {VisibilityStore} from '../Utils/GetVisibilityStore';
-  const {setVisibility} = getContext<VisibilityStore>('Counter');
   let count = 0;
   const increment = () => {count += 1};
   const decrement = () => {count -= 1};
-  const hideCounter = () => {setVisibility(false)};
 </script>
 
 <div class='parent'>
@@ -13,7 +9,6 @@
     <h3>Counter: {count}</h3>
     <button on:click={increment}>Increment</button>
     <button on:click={decrement}>Decrement</button>
-    <button on:click={hideCounter}>Hide Counter</button>
   </div>
 </div>
 
