@@ -1,1 +1,1 @@
-# DOCS IN WIP (I'M LAZY :P)
+# DOCS ARE A WIP (I'M LAZY :P)
