@@ -1,9 +1,9 @@
 ---@param data NUI_DATA
 local function handleNui(data)
-  local message = data?.message
   local focus = data?.focus
-  if not type(message) == 'table' or not type(focus) == 'boolean' then return end
-  SetNuiFocus(focus, focus)
+  if type(focus) == 'boolean' then SetNuiFocus(focus, focus) end
+  local message = data?.message
+  if not type(message) == 'table' then return end
   SendNUIMessage(message)
 end
 
