@@ -1,14 +1,24 @@
 <script lang='ts'>
+  import { Locale } from '../Utils/LocaleProvider';
   let count = 0;
-  const increment = () => {count += 1};
-  const decrement = () => {count -= 1};
+  const increment = () => { count += 1; };
+  const decrement = () => { count -= 1; };
+  let counterText = '';
+  let incrementText = '';
+  let decrementText = '';
+  const loadLocales = async () => {
+    counterText = await Locale('counter');
+    incrementText = await Locale('increment');
+    decrementText = await Locale('decrement');
+  };
+  loadLocales();
 </script>
 
 <div class='parent'>
   <div class='counter'>
-    <h3>Counter: {count}</h3>
-    <button on:click={increment}>Increment</button>
-    <button on:click={decrement}>Decrement</button>
+    <h3>{counterText !== '' ? counterText : 'Counter:'} {count}</h3>
+    <button on:click={increment}>{incrementText !== '' ? incrementText : 'Increment'}</button>
+    <button on:click={decrement}>{decrementText !== '' ? decrementText : 'Decrement'}</button>
   </div>
 </div>
 

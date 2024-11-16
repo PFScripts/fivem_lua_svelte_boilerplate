@@ -1,4 +1,4 @@
-import { writable, type Writable } from 'svelte/store';
+import {writable, type Writable} from 'svelte/store';
 
 export interface VisibilityStore {visibility: Writable<boolean>, setVisibility: (visible: boolean) => void, component: string};
 

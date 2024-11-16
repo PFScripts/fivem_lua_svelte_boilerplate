@@ -1,1 +1,7 @@
-// TODO: idk how ill make this yet but prob use ox_lib idk :)
+import {IsRunningInBrowser} from './IsRunningInBrowser';
+import {TriggerNuiCallback} from './TriggerNuiCallback';
+
+export const Locale = async (key: string): Promise<string> => {
+  if (IsRunningInBrowser()) return '';
+  return await TriggerNuiCallback<string>('getLocale', key);
+};

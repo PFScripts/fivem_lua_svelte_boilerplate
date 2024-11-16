@@ -1,5 +1,5 @@
 {
-  "counter": "Counter:",
-  "increment": "Increment",
-  "decrement": "Decrement"
+  "counter": "Contador:",
+  "increment": "Aumentar",
+  "decrement": "Diminuir"
 }

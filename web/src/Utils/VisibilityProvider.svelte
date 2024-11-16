@@ -1,7 +1,7 @@
 <script lang='ts'>
   import {onMount, onDestroy} from 'svelte';
   import {GetVisibilityStore} from './GetVisibilityStore';
-  import {HandleNuiMessage } from './HandleNuiMessage';
+  import {HandleNuiMessage} from './HandleNuiMessage';
   import {TriggerNuiCallback} from './TriggerNuiCallback';
   export let component: string;
   const {visibility, setVisibility} = GetVisibilityStore(component);

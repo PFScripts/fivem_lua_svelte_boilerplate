@@ -7,13 +7,22 @@ local function handleNui(data)
   SendNUIMessage(message)
 end
 
----@param body any
----@param resultCallback function
-local function hideUI(body, resultCallback)
-  handleNui({message = body, focus = false})
-  resultCallback(true)
+---@param message any
+---@param cb function
+local function hideUI(message, cb)
+  handleNui({message = message, focus = false})
+  cb(true)
+end
+
+---@param str string
+---@param cb function
+local function getLocaleConvar(str, cb)
+  cb(locale(str))
 end
 
 RegisterNUICallback('hideUI', hideUI)
+RegisterNUICallback('getLocale', getLocaleConvar)
+
+
 
 return handleNui
