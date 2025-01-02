@@ -107,7 +107,7 @@ HandleNuiMessage<unknown>('getPlayerInfo').then(data => {
 
 ```ts
 // Example:
-// This stimulates the SEND_NUI_MESSAGE native in the development environment.
+// This simulates the SEND_NUI_MESSAGE native in the development environment.
 // Expects an array as the 1st arg and the 2nd args its the delay in ms.
 SendNuiMessage([
   {action: 'setVisibleCounter', data: true}
